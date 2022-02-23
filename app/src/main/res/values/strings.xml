@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Test Digitify</string>
+          <string name="movies">Movies</string>
+        <string name="movie_poster">Movie Poster</string>
+        <string name="overview">Overview:</string>
+        <string name="tagLine">Tagline:</string>
+        <string name="status">Status</string>
+        <string name="releaseDate">Release Date</string>
+        <string name="voteAverage">Vote Average</string>
+        <string name="title_activity_movie">Movie</string>
+          <string name="top_rated">Top Rated</string>
+         <string name="now_playing">Now Playing</string>
+         <string name="Movie_Detail">Movie Details</string>
+    <string name="vote_count">Vote Count</string>
+    <string name="language">Language</string>
+
+</resources>

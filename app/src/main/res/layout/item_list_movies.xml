@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="moviesResults"
+            type="com.example.example.MoviesResults" />
+    </data>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       app:cardCornerRadius="@dimen/dm_8"
+        android:elevation="@dimen/dm_8"
+        android:translationZ="@dimen/dm_8"
+        android:layout_margin="@dimen/dm_16"
+
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/DarkBlue">
+
+
+            <ImageView
+                android:id="@+id/poster"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                app:image='@{moviesResults.posterPath ?? ""}'
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/movieName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@{moviesResults.title}"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/poster"
+                app:layout_constraintTop_toBottomOf="@+id/poster"
+                tools:text="movie Name" />
+
+            <TextView
+                android:id="@+id/movieYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+
+                android:paddingLeft="@dimen/dm_2"
+                android:paddingRight="@dimen/dm_2"
+                android:paddingBottom="@dimen/dm_4"
+                android:textColor="@android:color/white"
+                app:changeTextColor='@{moviesResults.releaseDate?? ""}'
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/movieName"
+                app:layout_constraintTop_toBottomOf="@+id/movieName"
+                tools:text="2018" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</layout>
